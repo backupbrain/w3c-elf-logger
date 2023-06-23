@@ -51,6 +51,16 @@ console.log(
 // output:
 // 2023-01-16 13:03:45 GET /path/to/file 200 HTTP/1.1
 
+console.log(" ");
+console.log("--- Print the log to console directly from module ---");
+log.printHeader();
+log.print({
+  "cs-method": "GET",
+  "cs-uri-stem": "/path/to/file",
+  "sc-status": 200,
+  "cs-version": "HTTP/1.1",
+});
+
 // you can put in JSON objets
 const mixedFields = [
   "true",

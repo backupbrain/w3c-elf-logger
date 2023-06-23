@@ -72,7 +72,6 @@ const getVersionHeader = (
   headers?: StampHeaders | undefined,
   options?: LogOptions | undefined
 ) => {
-  console.log({ headers, options });
   if (!headers) {
     headers = new Map<StampHeaderKey, string>();
   }
@@ -175,6 +174,13 @@ export const startLog = ({ headers, fields, options }: StartLogProps) => {
     header,
     event: (event: Event) => {
       return getEventLog(fields, event, options);
+    },
+    printHeader: () => console.log(header),
+    print: (event: Event) => {
+      console.log(getEventLog(fields, event, options));
+    },
+    error: (event: Event) => {
+      console.error(getEventLog(fields, event, options));
     },
   };
 };

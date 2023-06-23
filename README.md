@@ -15,6 +15,18 @@ An example log event for a HTTP request might look like this:
 This library can create that entry using this line:
 
 ```typescript
+log.print({
+  "cs-method": "POST",
+  "cs-uri-stem": "/graphql",
+  "sc-status": 201,
+  "cs-version": "HTTP/2",
+});
+```
+
+Or you can capture the log and print it yourself or save it directly to a file:
+
+```typescript
+// print to stdout
 console.log(
   log.event({
     "cs-method": "POST",
@@ -22,6 +34,17 @@ console.log(
     "sc-status": 201,
     "cs-version": "HTTP/2",
   })
+);
+
+// append to a file
+fs.appendFileSync(
+  "/var/log/myprogram.log",
+  log.event({
+    "cs-method": "POST",
+    "cs-uri-stem": "/graphql",
+    "sc-status": 201,
+    "cs-version": "HTTP/2",
+  }) + "\n"
 );
 ```
 
@@ -124,6 +147,8 @@ headers.set("Date", isoDateTime(new Date()));
 const log = startLog({ headers, fields });
 
 console.log(log.header);
+// or
+log.printHeader();
 ```
 
 Console output:
@@ -154,6 +179,8 @@ const getEvent = log.event({
 });
 
 console.log(getEvent);
+// or
+log.print(event);
 ```
 
 Console Output:
