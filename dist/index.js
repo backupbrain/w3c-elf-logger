@@ -6,7 +6,6 @@ const isoDateTime = (date) => {
 };
 exports.isoDateTime = isoDateTime;
 const getVersionHeader = (headers, options) => {
-    console.log({ headers, options });
     if (!headers) {
         headers = new Map();
     }
@@ -99,6 +98,13 @@ const startLog = ({ headers, fields, options }) => {
         header,
         event: (event) => {
             return getEventLog(fields, event, options);
+        },
+        printHeader: () => console.log(header),
+        print: (event) => {
+            console.log(getEventLog(fields, event, options));
+        },
+        error: (event) => {
+            console.error(getEventLog(fields, event, options));
         },
     };
 };

@@ -1,6 +1,6 @@
 {
   "name": "w3c-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "standardize console log output for use with logrotate, network loggers, and log files",
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js",

@@ -44,4 +44,7 @@ export declare const startLog: ({ headers, fields, options }: StartLogProps) => 
     __fields: string;
     header: string;
     event: (event: Event) => string;
+    printHeader: () => void;
+    print: (event: Event) => void;
+    error: (event: Event) => void;
 };

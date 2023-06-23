@@ -53,13 +53,13 @@ fs.appendFileSync(
 **NPM:**
 
 ```bash
-npm install --save w3c-log
+npm install --save w3c-logger
 ```
 
 **Yarn**
 
 ```bash
-yarn add w3c-log
+yarn add w3c-logger
 ```
 
 **Browser**
@@ -73,7 +73,7 @@ Browser file can be found in `dist/index.js`
 ## Usage
 
 ```
-npm install w3c-log
+npm install w3c-logger
 ```
 
 Let's see how to build a standard HTTP log for an "Example v1.0.0" software:
@@ -93,15 +93,15 @@ Typescript:
 
 ```typescript
 // import startLog and types if necessary
-import { startLog } from "w3c-log";
+import { startLog } from "w3c-logger";
 ```
 
 Javascript:
 
 ```javascript
-import { startLog } from "w3c-log";
+import { startLog } from "w3c-logger";
 // or
-const startLog = require("w3c-log").startLog;
+const startLog = require("w3c-logger").startLog;
 ```
 
 ## Define the Log Format and Metadata
