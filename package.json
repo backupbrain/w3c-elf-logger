@@ -1,6 +1,6 @@
 {
   "name": "w3c-elf-logger",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "standardize elf (extended log format) console log output for use with logrotate, network loggers, and log files",
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js",
