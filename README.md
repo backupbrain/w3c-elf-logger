@@ -1,6 +1,6 @@
-# W3C Extended Log Formatter
+# W3C Extended Log Formatter (ELF)
 
-This module produces standardized event logs based on the W3C [Extended Log File Format](https://www.w3.org/TR/WD-logfile.html).
+This module outputs standardized event logs based on the W3C [Extended Log File Format](https://www.w3.org/TR/WD-logfile.html) (ELF).
 
 It is meant for producing HTTP-style logs, which can be routed to STDOUT, a log file (with optional log rotation), and/or a network log analyzer.
 
@@ -53,13 +53,13 @@ fs.appendFileSync(
 **NPM:**
 
 ```bash
-npm install --save w3c-logger
+npm install --save w3c-elf-logger
 ```
 
 **Yarn**
 
 ```bash
-yarn add w3c-logger
+yarn add w3c-elf-logger
 ```
 
 **Browser**
@@ -73,7 +73,7 @@ Browser file can be found in `dist/index.js`
 ## Usage
 
 ```
-npm install w3c-logger
+npm install w3c-elf-logger
 ```
 
 Let's see how to build a standard HTTP log for an "Example v1.0.0" software:
@@ -93,15 +93,15 @@ Typescript:
 
 ```typescript
 // import startLog and types if necessary
-import { startLog } from "w3c-logger";
+import { startLog } from "w3c-elf-logger";
 ```
 
 Javascript:
 
 ```javascript
-import { startLog } from "w3c-logger";
+import { startLog } from "w3c-elf-logger";
 // or
-const startLog = require("w3c-logger").startLog;
+const startLog = require("w3c-elf-logger").startLog;
 ```
 
 ## Define the Log Format and Metadata
