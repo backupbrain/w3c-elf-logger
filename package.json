@@ -1,7 +1,7 @@
 {
-  "name": "w3c-logger",
+  "name": "w3c-elf-logger",
   "version": "1.0.1",
-  "description": "standardize console log output for use with logrotate, network loggers, and log files",
+  "description": "standardize elf (extended log format) console log output for use with logrotate, network loggers, and log files",
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js",
     "demo": "node ./node_modules/ts-node/dist/bin.js example/index.ts",
@@ -14,7 +14,15 @@
   ],
   "license": "ISC",
   "author": "backupbrain@gmail.com",
-  "keywords": "logging, log, w3c, console, apache",
+  "keywords": [
+    "elf",
+    "extended log format",
+    "logging",
+    "log",
+    "w3c",
+    "console",
+    "apache"
+  ],
   "devDependencies": {
     "@types/jest": "^29.5.2",
     "jest": "^29.5.0",
